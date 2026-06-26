@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Rod Morgado — Executive Assistant Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0F1F3D;
+  --slate: #1B3A6B;
+  --gold: #C9973A;
+  --gold-light: #F0DDB0;
+  --off-white: #F8F6F1;
+  --gray-light: #E8E5DF;
+  --gray-mid: #9A9690;
+  --white: #FFFFFF;
+  --text: #1a1a18;
+  --text-muted: #6b6862;
+  --radius: 10px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--off-white); color: var(--text); font-size: 15px; line-height: 1.7; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--navy); border-bottom: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 58px;
+}
+.nav-brand { font-family: 'Playfair Display', serif; color: var(--white); font-size: 15px; font-weight: 600; white-space: nowrap; }
+.nav-brand span { color: var(--gold); }
+.nav-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav-links a {
+  color: rgba(255,255,255,0.72); font-size: 12px; font-weight: 500;
+  text-decoration: none; padding: 5px 10px; border-radius: 6px;
+  transition: all 0.15s; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+.nav-links a.active { color: var(--gold); }
+
+/* LAYOUT */
+main { padding-top: 58px; }
+section { padding: 72px 0; }
+section:nth-child(even) { background: var(--white); }
+.container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+.section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700;
+  color: var(--navy); line-height: 1.2; margin-bottom: 8px;
+}
+.section-sub { font-size: 15px; color: var(--text-muted); margin-bottom: 40px; max-width: 560px; }
+.gold-rule { width: 48px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 32px; }
+
+/* HERO */
+#hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+  padding: 96px 0 80px; min-height: 100vh; display: flex; align-items: center;
+}
+.hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(201,151,58,0.18); border: 1px solid rgba(201,151,58,0.5);
+  color: var(--gold-light); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px;
+  border-radius: 20px; margin-bottom: 20px;
+}
+.hero-name {
+  font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 60px);
+  font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 16px;
+}
+.hero-name em { color: var(--gold); font-style: normal; display: block; }
+.hero-tagline { font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 28px; max-width: 480px; line-height: 1.6; }
+.hero-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.6); }
+.hero-meta-item svg { opacity: 0.7; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-block; padding: 11px 24px; background: var(--gold);
+  color: var(--navy); font-weight: 600; font-size: 13px; border-radius: var(--radius);
+  text-decoration: none; transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-outline {
+  display: inline-block; padding: 10px 24px;
+  border: 1.5px solid rgba(255,255,255,0.35); color: var(--white);
+  font-weight: 500; font-size: 13px; border-radius: var(--radius);
+  text-decoration: none; transition: all 0.15s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero-avatar {
+  width: 200px; height: 200px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, #8B6520 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 700;
+  color: var(--white); flex-shrink: 0; border: 4px solid rgba(201,151,58,0.4);
+  box-shadow: 0 0 0 1px rgba(201,151,58,0.2);
+}
+.stat-row { display: flex; gap: 32px; margin-top: 36px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); }
+.stat-item .stat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--gold); }
+.stat-item .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.about-text p { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
+.about-text p strong { color: var(--navy); }
+.credential-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--gold-light); border: 1px solid var(--gold);
+  color: #7a5a1a; font-size: 12px; font-weight: 600;
+  padding: 5px 14px; border-radius: 20px; margin-top: 4px; margin-right: 6px;
+}
+.about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+.value-card {
+  background: var(--off-white); border: 1px solid var(--gray-light);
+  border-radius: var(--radius); padding: 14px 16px;
+}
+.value-card .v-icon { font-size: 20px; margin-bottom: 6px; }
+.value-card .v-title { font-size: 13px; font-weight: 600; color: var(--navy); }
+.value-card .v-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* SERVICES */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.service-card {
+  background: var(--off-white); border: 1px solid var(--gray-light);
+  border-radius: 12px; padding: 24px 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.service-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.service-icon {
+  width: 44px; height: 44px; background: var(--navy); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px; font-size: 20px;
+}
+.service-card h3 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.tag {
+  font-size: 11px; padding: 2px 8px; border-radius: 4px;
+  background: var(--white); border: 1px solid var(--gray-light); color: var(--text-muted);
+}
+
+/* RESUME */
+.resume-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.timeline-col h3 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 24px; }
+.timeline { position: relative; padding-left: 20px; border-left: 2px solid var(--gray-light); }
+.timeline-item { position: relative; padding-bottom: 28px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -27px; top: 4px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--gold); border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+.timeline-date { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.timeline-role { font-size: 14px; font-weight: 600; color: var(--navy); }
+.timeline-org { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+.timeline-bullets { list-style: none; padding: 0; }
+.timeline-bullets li { font-size: 13px; color: var(--text-muted); padding: 2px 0 2px 14px; position: relative; }
+.timeline-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 11px; top: 3px; }
+
+/* SKILLS */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.skill-group h3 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--gray-light); }
+.skill-item { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--gray-light); }
+.skill-item:last-child { border-bottom: none; }
+.skill-name { font-size: 13px; color: var(--navy); font-weight: 500; }
+.skill-dots { display: flex; gap: 3px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gray-light); }
+.dot.filled { background: var(--gold); }
+
+/* SOFTWARE */
+.software-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.software-card {
+  background: var(--white); border: 1px solid var(--gray-light);
+  border-radius: var(--radius); padding: 18px 14px; text-align: center;
+  transition: border-color 0.15s;
+}
+.software-card:hover { border-color: var(--gold); }
+.software-logo {
+  width: 44px; height: 44px; border-radius: 8px; margin: 0 auto 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 700;
+}
+.software-card .sw-name { font-size: 12px; font-weight: 600; color: var(--navy); }
+.software-card .sw-level { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+.sw-bar { height: 3px; border-radius: 2px; background: var(--gray-light); margin-top: 8px; }
+.sw-bar-fill { height: 100%; border-radius: 2px; background: var(--gold); }
+
+/* SOP / EMAIL SAMPLES */
+.sample-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+.stab {
+  padding: 7px 18px; border-radius: 20px; font-size: 13px; font-weight: 500;
+  border: 1.5px solid var(--gray-light); background: var(--white);
+  cursor: pointer; color: var(--text-muted); transition: all 0.15s;
+}
+.stab.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.stab:hover:not(.active) { border-color: var(--navy); color: var(--navy); }
+.sample-panel { display: none; }
+.sample-panel.active { display: block; }
+.sample-doc {
+  background: var(--white); border: 1px solid var(--gray-light);
+  border-radius: 12px; overflow: hidden;
+}
+.doc-header {
+  background: var(--navy); padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.doc-header .doc-title { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--white); }
+.doc-header .doc-meta { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.doc-body { padding: 28px 32px; font-size: 13.5px; line-height: 1.8; color: #333; }
+.doc-body .field-row { display: flex; margin-bottom: 8px; }
+.doc-body .field-label { font-weight: 600; color: var(--navy); min-width: 120px; flex-shrink: 0; }
+.doc-body .field-val { color: var(--text-muted); }
+.doc-section { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-light); }
+.doc-section h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 10px; }
+.doc-section ol, .doc-section ul { padding-left: 18px; }
+.doc-section li { font-size: 13px; color: var(--text-muted); padding: 2px 0; }
+.kpi-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+.kpi-badge {
+  background: var(--off-white); border: 1px solid var(--gray-light);
+  border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--navy); font-weight: 500;
+}
+.email-wrapper { background: var(--off-white); border-radius: 8px; padding: 20px; margin-bottom: 0; }
+.email-field { display: flex; gap: 10px; font-size: 13px; margin-bottom: 6px; }
+.email-field .ef-label { font-weight: 600; color: var(--navy); min-width: 64px; flex-shrink: 0; }
+.email-field .ef-val { color: var(--text-muted); }
+.email-body { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-light); font-size: 14px; color: #333; line-height: 1.8; white-space: pre-line; }
+
+/* CERTIFICATES */
+.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cert-card {
+  background: var(--white); border: 1px solid var(--gray-light);
+  border-radius: 12px; padding: 24px 20px; position: relative; overflow: hidden;
+}
+.cert-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--gold);
+}
+.cert-icon { font-size: 28px; margin-bottom: 12px; }
+.cert-card h3 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.cert-card .cert-org { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+.cert-card .cert-num { font-size: 11px; font-family: monospace; color: var(--gold); background: var(--gold-light); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
+.cert-card .cert-year { font-size: 12px; color: var(--text-muted); }
+.cert-placeholder {
+  background: var(--off-white); border: 2px dashed var(--gray-light);
+  border-radius: 12px; padding: 24px 20px; text-align: center; color: var(--text-muted);
+  font-size: 13px;
+}
+.cert-placeholder .add-icon { font-size: 24px; display: block; margin-bottom: 8px; opacity: 0.4; }
+
+/* CONTACT */
+#contact { background: var(--navy); }
+#contact .section-label { color: var(--gold); }
+#contact .section-title { color: var(--white); }
+#contact .section-sub { color: rgba(255,255,255,0.6); }
+#contact .gold-rule { background: var(--gold); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.contact-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
+.contact-icon {
+  width: 44px; height: 44px; background: rgba(201,151,58,0.15);
+  border: 1px solid rgba(201,151,58,0.3); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+}
+.contact-item .ci-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 4px; }
+.contact-item .ci-val { font-size: 14px; color: rgba(255,255,255,0.85); }
+.contact-item .ci-val a { color: inherit; text-decoration: none; }
+.contact-item .ci-val a:hover { color: var(--gold); }
+.avail-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3);
+  color: #6ee7a0; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.avail-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.contact-form-note {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 28px;
+}
+.contact-form-note h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--white); margin-bottom: 10px; }
+.contact-form-note p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 16px; }
+.input-row { margin-bottom: 12px; }
+.input-row input, .input-row textarea {
+  width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 10px 14px; color: var(--white); font-family: 'Inter', sans-serif;
+  font-size: 13px; outline: none; transition: border-color 0.15s;
+}
+.input-row input::placeholder, .input-row textarea::placeholder { color: rgba(255,255,255,0.3); }
+.input-row input:focus, .input-row textarea:focus { border-color: var(--gold); }
+.input-row textarea { resize: vertical; min-height: 80px; }
+
+/* FOOTER */
+footer {
+  background: #080f1e; padding: 24px 2rem; text-align: center;
+  font-size: 12px; color: rgba(255,255,255,0.35);
+}
+footer span { color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-avatar { display: none; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .software-grid { grid-template-columns: repeat(3, 1fr); }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid, .resume-cols, .contact-grid { grid-template-columns: 1fr; }
+  .about-values { grid-template-columns: 1fr; }
+  .stat-row { gap: 20px; }
+  .nav-links { display: none; }
+}
+@media (max-width: 480px) {
+  .services-grid, .skills-grid, .software-grid, .cert-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">John Rod <span>Morgado</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#resume">Resume</a>
+    <a href="#skills">Skills</a>
+    <a href="#software">Software</a>
+    <a href="#sop">SOPs</a>
+    <a href="#emails">Emails</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#22c55e"/></svg>
+          Available for remote work
+        </div>
+        <h1 class="hero-name">
+          John Rod<em>Morgado</em>
+        </h1>
+        <p class="hero-tagline">Executive Assistant &amp; Virtual Assistant — bringing 5 years of logistics operations, administrative precision, and teaching discipline to international remote teams.</p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Philippines (Remote)
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            UTC+8 · Flexible hours
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            USD $8–$15/hr
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Hire me</a>
+          <a href="#resume" class="btn-outline">View resume</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Years experience</div></div>
+          <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Professional roles</div></div>
+          <div class="stat-item"><div class="stat-num">LPT</div><div class="stat-label">Licensed teacher</div></div>
+          <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Remote ready</div></div>
+        </div>
+      </div>
+      <div class="hero-avatar">JR</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">About me</p>
+    <h2 class="section-title">Organized. Reliable.<br>Driven by results.</h2>
+    <div class="gold-rule"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am <strong>John Rod Morgado</strong>, a detail-oriented professional from the Philippines with over <strong>five years of experience</strong> in logistics operations, warehouse administration, and branch supervision. I am now channeling that operational expertise into world-class Executive Assistant and Virtual Assistant support for international clients.</p>
+        <p>What sets me apart is my dual background: I am both a <strong>seasoned logistics supervisor</strong> who has managed teams, coordinated shipments, and improved operational processes — and a <strong>Licensed Professional Teacher</strong>, which means I communicate clearly, train effectively, and document procedures with precision.</p>
+        <p>I thrive in fast-paced remote environments where organization, initiative, and professionalism are non-negotiable. My goal is simple: to become the most reliable person on your team.</p>
+        <div style="margin-top:16px;">
+          <span class="credential-pill">🎓 Licensed Professional Teacher (LPT)</span>
+          <span class="credential-pill">📦 Logistics Branch Supervisor</span>
+          <span class="credential-pill">🌐 Remote VA</span>
+        </div>
+      </div>
+      <div>
+        <div class="about-values">
+          <div class="value-card"><div class="v-icon">⚡</div><div class="v-title">Proactive</div><div class="v-desc">I anticipate needs before they become problems.</div></div>
+          <div class="value-card"><div class="v-icon">🎯</div><div class="v-title">Precise</div><div class="v-desc">Zero errors. Every detail is verified before delivery.</div></div>
+          <div class="value-card"><div class="v-icon">🤝</div><div class="v-title">Reliable</div><div class="v-desc">I deliver on time, every time, without reminders.</div></div>
+          <div class="value-card"><div class="v-icon">🚀</div><div class="v-title">Growth-minded</div><div class="v-desc">I continuously learn new tools and systems.</div></div>
+          <div class="value-card"><div class="v-icon">💬</div><div class="v-title">Communicator</div><div class="v-desc">Clear, professional English in all interactions.</div></div>
+          <div class="value-card"><div class="v-icon">🔒</div><div class="v-title">Discreet</div><div class="v-desc">Full confidentiality on all client information.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label">What I offer</p>
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">End-to-end administrative and operational support — everything a busy executive needs to stay focused and move fast.</p>
+    <div class="gold-rule"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📧</div>
+        <h3>Email &amp; Inbox Management</h3>
+        <p>Full inbox management with triage, prioritization, drafting, and Inbox Zero delivery. SLA-driven response times.</p>
+        <div class="service-tags"><span class="tag">Gmail</span><span class="tag">Outlook</span><span class="tag">SOP</span><span class="tag">CRM</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📅</div>
+        <h3>Calendar &amp; Scheduling</h3>
+        <p>Conflict-free calendar management, meeting scheduling, buffer time protection, and 24-hr event confirmations.</p>
+        <div class="service-tags"><span class="tag">Google Cal</span><span class="tag">Calendly</span><span class="tag">Zoom</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✈️</div>
+        <h3>Travel Coordination</h3>
+        <p>End-to-end travel booking: flights, hotels, transfers, visa checks, and detailed itinerary preparation.</p>
+        <div class="service-tags"><span class="tag">Booking.com</span><span class="tag">Airbnb</span><span class="tag">Skyscanner</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Logistics &amp; Operations Support</h3>
+        <p>Shipment coordination, inventory tracking, supplier communication, and operations reporting from 5 years of field experience.</p>
+        <div class="service-tags"><span class="tag">Inventory</span><span class="tag">Dispatch</span><span class="tag">Reporting</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Data Entry &amp; Reporting</h3>
+        <p>Accurate data entry, spreadsheet management, report preparation, and KPI tracking with zero tolerance for errors.</p>
+        <div class="service-tags"><span class="tag">Excel</span><span class="tag">Google Sheets</span><span class="tag">Notion</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>SOP &amp; Documentation</h3>
+        <p>Writing and maintaining SOPs, process guides, meeting notes, and knowledge bases — clear, structured, professional.</p>
+        <div class="service-tags"><span class="tag">SOPs</span><span class="tag">Notion</span><span class="tag">Google Docs</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💬</div>
+        <h3>Customer Support</h3>
+        <p>Professional handling of customer inquiries, complaints, and follow-ups via email and chat with warmth and speed.</p>
+        <div class="service-tags"><span class="tag">Email</span><span class="tag">Chat</span><span class="tag">CRM</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Research &amp; Prospecting</h3>
+        <p>Internet research, competitor analysis, lead list building, and market research delivered in clean, organized reports.</p>
+        <div class="service-tags"><span class="tag">Google</span><span class="tag">LinkedIn</span><span class="tag">Sheets</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗂️</div>
+        <h3>CRM &amp; File Management</h3>
+        <p>CRM data entry and maintenance, digital file organization, and document management systems built for efficiency.</p>
+        <div class="service-tags"><span class="tag">CRM</span><span class="tag">Google Drive</span><span class="tag">Dropbox</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="container">
+    <p class="section-label">My background</p>
+    <h2 class="section-title">Resume</h2>
+    <p class="section-sub">Five years of real-world operations, logistics, and teaching — now fully focused on remote executive support.</p>
+    <div class="gold-rule"></div>
+    <div class="resume-cols">
+      <div>
+        <div class="timeline-col"><h3>Work experience</h3></div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019 – 2024 · 5 years</div>
+            <div class="timeline-role">Logistics Branch Supervisor</div>
+            <div class="timeline-org">Logistics Corporation · Philippines</div>
+            <ul class="timeline-bullets">
+              <li>Managed daily logistics operations and workflow coordination</li>
+              <li>Supervised warehouse team and ensured process compliance</li>
+              <li>Handled inventory control and documentation with high accuracy</li>
+              <li>Coordinated inbound and outbound shipments</li>
+              <li>Prepared operational and performance reports</li>
+              <li>Communicated with suppliers, clients, and internal teams</li>
+              <li>Identified process improvements to reduce errors and delays</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2020 – 2022</div>
+            <div class="timeline-role">Licensed Professional Teacher (LPT)</div>
+            <div class="timeline-org">Department of Education / Private School · Philippines</div>
+            <ul class="timeline-bullets">
+              <li>Managed classroom organization, schedules, and student records</li>
+              <li>Developed instructional materials and learning documentation</li>
+              <li>Prepared administrative reports for school management</li>
+              <li>Strengthened multi-tasking and organizational skills</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 – Present</div>
+            <div class="timeline-role">Virtual Assistant (Freelance)</div>
+            <div class="timeline-org">Remote · International clients</div>
+            <ul class="timeline-bullets">
+              <li>Providing email management, calendar scheduling, and research</li>
+              <li>Creating SOPs and process documentation for remote clients</li>
+              <li>Delivering data entry, reporting, and customer support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="timeline-col"><h3>Education &amp; credentials</h3></div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Graduated 2020</div>
+            <div class="timeline-role">Bachelor of Secondary Education</div>
+            <div class="timeline-org">Philippine University</div>
+            <ul class="timeline-bullets">
+              <li>Developed strong communication and documentation skills</li>
+              <li>Trained in lesson planning, records management, and leadership</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2020</div>
+            <div class="timeline-role">Licensed Professional Teacher (LPT)</div>
+            <div class="timeline-org">Professional Regulation Commission · Philippines</div>
+            <ul class="timeline-bullets">
+              <li>National board licensure examination passed</li>
+              <li>Recognized professional credential in the Philippines</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2026</div>
+            <div class="timeline-role">Virtual Assistant Certification</div>
+            <div class="timeline-org">Online Professional Development</div>
+            <ul class="timeline-bullets">
+              <li>Certificate No. COP-WS7-2026-211</li>
+              <li>Completed professional VA training program</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <div class="timeline-col"><h3>Target roles</h3></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Executive Assistant</span>
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Virtual Assistant</span>
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Operations Assistant</span>
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Logistics Coordinator</span>
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Dispatch VA</span>
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Project Coordinator</span>
+            <span class="tag" style="font-size:12px;padding:5px 12px;">Customer Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">What I'm good at</p>
+    <h2 class="section-title">Skills</h2>
+    <p class="section-sub">Built through five years of real operations and refined through continuous professional development.</p>
+    <div class="gold-rule"></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Administrative</h3>
+        <div class="skill-item"><span class="skill-name">Email Management</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Calendar Management</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Data Entry</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Document Management</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Travel Coordination</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Meeting Scheduling</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Operations</h3>
+        <div class="skill-item"><span class="skill-name">Logistics Coordination</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Inventory Management</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Report Preparation</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Process Improvement</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">SOP Creation</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Team Supervision</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Communication</h3>
+        <div class="skill-item"><span class="skill-name">Professional English</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Customer Service</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Internet Research</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">CRM Management</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Project Coordination</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        <div class="skill-item"><span class="skill-name">Time Management</span><span class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:16px;">● = proficient &nbsp;&nbsp; ○ = developing</p>
+  </div>
+</section>
+
+<!-- SOFTWARE -->
+<section id="software">
+  <div class="container">
+    <p class="section-label">Tools I use</p>
+    <h2 class="section-title">Software proficiency</h2>
+    <p class="section-sub">Proficient in the tools that international executives and remote teams depend on daily.</p>
+    <div class="gold-rule"></div>
+    <div class="software-grid">
+      <div class="software-card"><div class="software-logo" style="background:#E8F0FE;color:#1a73e8;font-size:13px;font-weight:700;">G</div><div class="sw-name">Gmail</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:95%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E3F2FD;color:#0078d4;font-size:11px;font-weight:700;">OL</div><div class="sw-name">Outlook</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:90%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E8F5E9;color:#0f9d58;font-size:11px;font-weight:700;">GD</div><div class="sw-name">Google Docs</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:92%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E8F5E9;color:#0f9d58;font-size:11px;font-weight:700;">GS</div><div class="sw-name">Google Sheets</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:88%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E3F2FD;color:#185abd;font-size:11px;font-weight:700;">XL</div><div class="sw-name">Excel</div><div class="sw-level">Proficient</div><div class="sw-bar"><div class="sw-bar-fill" style="width:85%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E3F2FD;color:#2b579a;font-size:11px;font-weight:700;">WD</div><div class="sw-name">MS Word</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:90%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#EDE7F6;color:#5f3dc4;font-size:11px;font-weight:700;">NT</div><div class="sw-name">Notion</div><div class="sw-level">Proficient</div><div class="sw-bar"><div class="sw-bar-fill" style="width:80%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E8F5FE;color:#4A154B;font-size:11px;font-weight:700;">SL</div><div class="sw-name">Slack</div><div class="sw-level">Proficient</div><div class="sw-bar"><div class="sw-bar-fill" style="width:82%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E6F7FF;color:#0065ff;font-size:11px;font-weight:700;">TR</div><div class="sw-name">Trello</div><div class="sw-level">Proficient</div><div class="sw-bar"><div class="sw-bar-fill" style="width:78%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E8FFF3;color:#00b241;font-size:11px;font-weight:700;">AS</div><div class="sw-name">Asana</div><div class="sw-level">Intermediate</div><div class="sw-bar"><div class="sw-bar-fill" style="width:70%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E9F5FE;color:#7B68EE;font-size:11px;font-weight:700;">CU</div><div class="sw-name">ClickUp</div><div class="sw-level">Intermediate</div><div class="sw-bar"><div class="sw-bar-fill" style="width:68%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#FFF8E1;color:#ff9800;font-size:11px;font-weight:700;">ZM</div><div class="sw-name">Zoom</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:90%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#F3F0FF;color:#5f3dc4;font-size:11px;font-weight:700;">LM</div><div class="sw-name">Loom</div><div class="sw-level">Proficient</div><div class="sw-bar"><div class="sw-bar-fill" style="width:75%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#FFF3E0;color:#e65c00;font-size:11px;font-weight:700;">CV</div><div class="sw-name">Canva</div><div class="sw-level">Intermediate</div><div class="sw-bar"><div class="sw-bar-fill" style="width:65%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#E8F5E9;color:#137333;font-size:11px;font-weight:700;">GC</div><div class="sw-name">Google Cal</div><div class="sw-level">Advanced</div><div class="sw-bar"><div class="sw-bar-fill" style="width:93%"></div></div></div>
+      <div class="software-card"><div class="software-logo" style="background:#FFF0F0;color:#c53030;font-size:11px;font-weight:700;">AI</div><div class="sw-name">Claude / AI</div><div class="sw-level">Proficient</div><div class="sw-bar"><div class="sw-bar-fill" style="width:78%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOP SAMPLES -->
+<section id="sop">
+  <div class="container">
+    <p class="section-label">SOP samples</p>
+    <h2 class="section-title">Standard operating procedures</h2>
+    <p class="section-sub">Professionally written SOPs I create and maintain for clients — demonstrating systems thinking and documentation expertise.</p>
+    <div class="gold-rule"></div>
+    <div class="sample-tabs">
+      <button class="stab active" onclick="showSample('sop','email-sop',this)">Email management</button>
+      <button class="stab" onclick="showSample('sop','cal-sop',this)">Calendar management</button>
+      <button class="stab" onclick="showSample('sop','daily-sop',this)">Daily VA routine</button>
+    </div>
+    <div class="sample-doc">
+      <div class="doc-header">
+        <div><div class="doc-title" id="sop-title">SOP-001: Email Triage &amp; Inbox Management</div><div class="doc-meta">Version 1.0 · Prepared by John Rod Morgado · VA / Administrative Support</div></div>
+      </div>
+      <div class="doc-body">
+        <div id="email-sop" class="sample-panel active">
+          <div class="field-row"><span class="field-label">Purpose:</span><span class="field-val">To ensure all incoming emails are managed efficiently, professionally, and within required response times while maintaining confidentiality and accuracy.</span></div>
+          <div class="field-row" style="margin-top:8px;"><span class="field-label">Scope:</span><span class="field-val">Applies to all business email accounts managed by the Virtual Assistant.</span></div>
+          <div class="field-row" style="margin-top:8px;"><span class="field-label">Tools:</span><span class="field-val">Gmail / Outlook · Google Workspace / Microsoft Office · Slack / Teams · CRM (if applicable)</span></div>
+          <div class="doc-section">
+            <h4>Procedure</h4>
+            <ol>
+              <li>Log in and check for new emails at start of shift.</li>
+              <li>Categorize all emails: Urgent / Client / Customer Support / Internal / Marketing / Spam.</li>
+              <li>Prioritize Urgent and Client requests above all others.</li>
+              <li>Draft responses — verify grammar, tone, attachments, and recipient before sending.</li>
+              <li>Archive completed email threads; flag pending items with a follow-up date.</li>
+              <li>Submit end-of-day inbox summary report to executive.</li>
+            </ol>
+          </div>
+          <div class="doc-section">
+            <h4>Response time standards</h4>
+            <div class="kpi-row">
+              <span class="kpi-badge">🔴 Urgent — within 30 min</span>
+              <span class="kpi-badge">🟠 Client — within 1 hr</span>
+              <span class="kpi-badge">🟡 Customer Support — within 4 hr</span>
+              <span class="kpi-badge">🟢 General — within 24 hr</span>
+            </div>
+          </div>
+          <div class="doc-section">
+            <h4>Quality checklist (before every send)</h4>
+            <ul>
+              <li>Correct recipient confirmed</li>
+              <li>Subject line is clear and professional</li>
+              <li>Grammar and spelling verified</li>
+              <li>All attachments included</li>
+              <li>Professional closing and signature included</li>
+            </ul>
+          </div>
+          <div class="doc-section">
+            <h4>Key performance indicators</h4>
+            <div class="kpi-row">
+              <span class="kpi-badge">95% on-time response rate</span>
+              <span class="kpi-badge">Inbox Zero by EOD</span>
+              <span class="kpi-badge">Zero missed urgent emails</span>
+              <span class="kpi-badge">High client satisfaction</span>
+            </div>
+          </div>
+        </div>
+        <div id="cal-sop" class="sample-panel">
+          <div class="field-row"><span class="field-label">Purpose:</span><span class="field-val">To maintain the executive's calendar with zero conflicts, complete preparation, and proactive communication.</span></div>
+          <div class="field-row" style="margin-top:8px;"><span class="field-label">Scope:</span><span class="field-val">All meetings, appointments, and events for the executive's primary and secondary calendars.</span></div>
+          <div class="field-row" style="margin-top:8px;"><span class="field-label">Tools:</span><span class="field-val">Google Calendar / Outlook · Calendly · Zoom / Google Meet · Slack</span></div>
+          <div class="doc-section">
+            <h4>Daily procedure</h4>
+            <ol>
+              <li>Review the next 48 hours each morning for conflicts or missing agendas.</li>
+              <li>Block focus time before scheduling any new meetings.</li>
+              <li>Add 15-minute buffers between all external calls and meetings.</li>
+              <li>Confirm attendance of all external attendees 24 hours before the meeting.</li>
+              <li>Attach agenda, background documents, or briefing notes to each event.</li>
+              <li>Send the executive a 1-hour reminder for every meeting.</li>
+              <li>Handle reschedule requests within 2 hours of notification.</li>
+            </ol>
+          </div>
+          <div class="doc-section">
+            <h4>Meeting preparation checklist</h4>
+            <ul>
+              <li>Agenda prepared and distributed to all attendees</li>
+              <li>Video call link tested and included</li>
+              <li>Briefing document or context note attached</li>
+              <li>Executive notified of attendees and purpose</li>
+              <li>Post-meeting: notes distributed within 2 hours</li>
+            </ul>
+          </div>
+          <div class="doc-section">
+            <h4>Key performance indicators</h4>
+            <div class="kpi-row">
+              <span class="kpi-badge">Zero double-bookings</span>
+              <span class="kpi-badge">100% meetings have agenda</span>
+              <span class="kpi-badge">All reschedules handled same day</span>
+            </div>
+          </div>
+        </div>
+        <div id="daily-sop" class="sample-panel">
+          <div class="field-row"><span class="field-label">Purpose:</span><span class="field-val">To ensure every shift begins in an organized, prepared state with all priorities identified and communicated.</span></div>
+          <div class="field-row" style="margin-top:8px;"><span class="field-label">Frequency:</span><span class="field-val">Daily — start of every shift (15 minutes)</span></div>
+          <div class="doc-section">
+            <h4>Opening routine (first 15 minutes)</h4>
+            <ol>
+              <li>Check Slack / Teams for overnight messages and urgent requests.</li>
+              <li>Open email — triage and apply priority labels.</li>
+              <li>Review today's full calendar and note all key meetings.</li>
+              <li>Open task tracker (ClickUp / Asana / Trello) — identify today's top 3 priorities.</li>
+              <li>Check any pending client deadlines due today or tomorrow.</li>
+              <li>Send executive a brief "Good morning" status update (if requested by client).</li>
+              <li>Begin the day's work starting with the highest-priority task.</li>
+            </ol>
+          </div>
+          <div class="doc-section">
+            <h4>End of shift routine</h4>
+            <ol>
+              <li>Complete or escalate all urgent tasks.</li>
+              <li>Bring inbox to zero or flag with action dates.</li>
+              <li>Update task tracker with today's progress.</li>
+              <li>Send EOD report to executive.</li>
+              <li>Set tomorrow's priority list.</li>
+              <li>Log out of all client systems securely.</li>
+            </ol>
+          </div>
+          <div class="doc-section">
+            <h4>Key performance indicators</h4>
+            <div class="kpi-row">
+              <span class="kpi-badge">EOD report sent daily</span>
+              <span class="kpi-badge">All tasks tracked</span>
+              <span class="kpi-badge">Zero missed priorities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL SAMPLES -->
+<section id="emails">
+  <div class="container">
+    <p class="section-label">Email samples</p>
+    <h2 class="section-title">Professional email writing</h2>
+    <p class="section-sub">Examples of the professional, warm, and results-driven emails I write on behalf of executives and for client communication.</p>
+    <div class="gold-rule"></div>
+    <div class="sample-tabs">
+      <button class="stab active" onclick="showEmail('intro',this)">Client intro</button>
+      <button class="stab" onclick="showEmail('followup',this)">Task follow-up</button>
+      <button class="stab" onclick="showEmail('escalation',this)">Escalation</button>
+      <button class="stab" onclick="showEmail('thankyou',this)">Post-interview</button>
+      <button class="stab" onclick="showEmail('complaint',this)">Complaint</button>
+    </div>
+    <div class="sample-doc">
+      <div class="doc-header">
+        <div><div class="doc-title" id="email-title">New Client Introduction</div><div class="doc-meta">Written by John Rod Morgado · Professional Email Sample</div></div>
+      </div>
+      <div class="doc-body">
+        <div id="intro" class="sample-panel active">
+          <div class="email-wrapper">
+            <div class="email-field"><span class="ef-label">Subject:</span><span class="ef-val">Excited to work with you — let's get started!</span></div>
+            <div class="email-field"><span class="ef-label">To:</span><span class="ef-val">[Client Name] &lt;client@company.com&gt;</span></div>
+            <div class="email-body">Hi [Client Name],
+
+Thank you so much for this opportunity — I'm genuinely excited to begin supporting you.
+
+My name is John Rod Morgado, and I'll be your Virtual Assistant starting today. To ensure our first week is smooth and immediately productive, I'd love to schedule a quick 20-minute onboarding call so we can align on your priorities, preferred communication style, tools you use, and how I can best support you from day one.
+
+I've already reviewed the information you shared and have a few initial ideas on how to streamline your inbox and calendar. I'm ready to dive in.
+
+Please let me know your available times this week, or feel free to book directly here: [Calendly link].
+
+Looking forward to making a real difference in your workflow.
+
+Warm regards,
+John Rod Morgado
+Virtual Assistant
+📧 morgadojr23@email.com · 📞 +63 907 168 7418</div>
+          </div>
+        </div>
+        <div id="followup" class="sample-panel">
+          <div class="email-wrapper">
+            <div class="email-field"><span class="ef-label">Subject:</span><span class="ef-val">Q3 Report — completed and ready for your review</span></div>
+            <div class="email-field"><span class="ef-label">To:</span><span class="ef-val">[Executive Name] &lt;exec@company.com&gt;</span></div>
+            <div class="email-body">Hi [Name],
+
+Quick update: the Q3 performance report has been completed and is ready for your review.
+
+Here's a summary of what was done:
+• Compiled all data from the sales and operations trackers
+• Formatted and organized the report per your preferred template
+• Added an executive summary on page 1 for quick reference
+• File saved to: [Google Drive link]
+
+A few figures I'd like to flag for your attention: [briefly note anything important].
+
+Please review at your convenience and let me know if you'd like any sections revised or expanded. Happy to adjust the format or add additional data points.
+
+Best,
+John Rod</div>
+          </div>
+        </div>
+        <div id="escalation" class="sample-panel">
+          <div class="email-wrapper">
+            <div class="email-field"><span class="ef-label">Subject:</span><span class="ef-val">[URGENT] Supplier payment — action needed before Friday</span></div>
+            <div class="email-field"><span class="ef-label">To:</span><span class="ef-val">[Executive Name] &lt;exec@company.com&gt;</span></div>
+            <div class="email-body">Hi [Name],
+
+I want to bring something to your attention that needs a decision today.
+
+Situation: Supplier ABC has flagged that their invoice (#INV-2024-089, $3,200) is now 7 days overdue. They have indicated that shipments for next week's order may be placed on hold if payment is not confirmed by Friday, June 28.
+
+Impact: A hold would delay our scheduled delivery to [Client], potentially affecting the fulfillment deadline.
+
+My recommendation: Approve payment release today so I can coordinate with accounts and confirm with the supplier before end of business.
+
+I've attached the invoice and the original payment authorization form for your reference. Please advise how you'd like to proceed — I'm ready to act immediately on your confirmation.
+
+John Rod</div>
+          </div>
+        </div>
+        <div id="thankyou" class="sample-panel">
+          <div class="email-wrapper">
+            <div class="email-field"><span class="ef-label">Subject:</span><span class="ef-val">Thank you — Executive Assistant Interview</span></div>
+            <div class="email-field"><span class="ef-label">To:</span><span class="ef-val">[Interviewer Name] &lt;hr@company.com&gt;</span></div>
+            <div class="email-body">Hi [Name],
+
+Thank you for taking the time to speak with me today about the Executive Assistant position at [Company]. I genuinely enjoyed our conversation — especially your insights on how the team operates and the kind of proactive support you're looking for.
+
+Our discussion reinforced my confidence that this is the right opportunity for me. My background in logistics supervision gave me hands-on experience with exactly the kind of high-volume coordination, documentation, and problem-solving you described. I'm particularly excited about the opportunity to build systems that make your executive's day run more efficiently from day one.
+
+I'd be happy to provide any additional information, references, or work samples that would support your decision. I look forward to hearing from you.
+
+Thank you again — it was a genuine pleasure.
+
+Best regards,
+John Rod Morgado
+📧 morgadojr23@email.com · 📞 +63 907 168 7418
+LinkedIn: [your LinkedIn URL]</div>
+          </div>
+        </div>
+        <div id="complaint" class="sample-panel">
+          <div class="email-wrapper">
+            <div class="email-field"><span class="ef-label">Subject:</span><span class="ef-val">Re: Delayed shipment — Order #45892</span></div>
+            <div class="email-field"><span class="ef-label">To:</span><span class="ef-val">[Customer Name] &lt;customer@email.com&gt;</span></div>
+            <div class="email-body">Hi [Name],
+
+Thank you for reaching out, and I sincerely apologize for the delay in your shipment — I completely understand how frustrating this is, and I want to make it right for you as quickly as possible.
+
+I've personally reviewed your order (#45892) and here is the current status:
+
+• Current location: [City/Hub]
+• Delay reason: Carrier backlog due to [weather / high volume / customs]
+• Revised estimated delivery: [New Date]
+• Tracking link: [URL]
+
+I've escalated this to our logistics team to prioritize your order. I will personally follow up with a confirmed delivery update by [Date/Time] — you don't need to reach out again, I will come to you.
+
+Once more, I'm sorry this happened. Your patience means a great deal to us.
+
+Warm regards,
+John Rod Morgado
+Customer Support | Logistics Team</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="container">
+    <p class="section-label">Credentials</p>
+    <h2 class="section-title">Certificates &amp; licenses</h2>
+    <p class="section-sub">Verified professional credentials that demonstrate commitment to excellence and continuous learning.</p>
+    <div class="gold-rule"></div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <h3>Licensed Professional Teacher</h3>
+        <div class="cert-org">Professional Regulation Commission · Philippines</div>
+        <div class="cert-num">PRC — LPT License</div>
+        <div class="cert-year">Issued: 2020 · Active License</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📜</div>
+        <h3>Bachelor of Secondary Education</h3>
+        <div class="cert-org">Philippine University</div>
+        <div class="cert-num">Degree Certificate</div>
+        <div class="cert-year">Graduated: 2020</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">💼</div>
+        <h3>Virtual Assistant Certification</h3>
+        <div class="cert-org">Online Professional Development Program</div>
+        <div class="cert-num">COP-WS7-2026-211</div>
+        <div class="cert-year">Issued: 2026</div>
+      </div>
+      <div class="cert-placeholder"><span class="add-icon">+</span>Add your next certificate here<br><small style="font-size:11px;display:block;margin-top:4px;">e.g. Google Workspace, HubSpot, Asana</small></div>
+      <div class="cert-placeholder"><span class="add-icon">+</span>Add your next certificate here<br><small style="font-size:11px;display:block;margin-top:4px;">e.g. Project Management, Excel, Canva</small></div>
+      <div class="cert-placeholder"><span class="add-icon">+</span>Add your next certificate here<br><small style="font-size:11px;display:block;margin-top:4px;">e.g. LinkedIn Learning, Coursera</small></div>
+    </div>
+    <div style="margin-top:24px;padding:16px 20px;background:var(--gold-light);border:1px solid var(--gold);border-radius:var(--radius);">
+      <p style="font-size:13px;color:#7a5a1a;"><strong>Note to recruiters:</strong> Certified copies of all credentials are available upon request. My PRC license and university diploma are verifiable through the respective institutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Get in touch</p>
+    <h2 class="section-title">Contact me</h2>
+    <p class="section-sub">Available for remote Executive Assistant and Virtual Assistant roles with international clients. Let's talk.</p>
+    <div class="gold-rule"></div>
+    <div class="avail-badge"><div class="avail-dot"></div> Actively available for new clients</div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:morgadojr23@email.com">morgadojr23@email.com</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><div class="ci-label">Phone / WhatsApp</div><div class="ci-val"><a href="tel:+639071687418">+63 907 168 7418</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><div class="ci-label">Location</div><div class="ci-val">Philippines · Remote (Worldwide)</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><div class="ci-label">Timezone</div><div class="ci-val">UTC+8 · Flexible to client timezone</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💰</div>
+          <div><div class="ci-label">Rate</div><div class="ci-val">USD $8–$15/hour · Open to project-based</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🔗</div>
+          <div><div class="ci-label">LinkedIn</div><div class="ci-val"><a href="#">linkedin.com/in/johnrodmorgado</a></div></div>
+        </div>
+      </div>
+      <div class="contact-form-note">
+        <h3>Ready to work together?</h3>
+        <p>Send me a message and I'll respond within a few hours. I'm most responsive during Philippine business hours (8 AM – 6 PM PHT) but available for calls in your timezone.</p>
+        <div class="input-row"><input type="text" placeholder="Your name"></div>
+        <div class="input-row"><input type="email" placeholder="Your email address"></div>
+        <div class="input-row"><input type="text" placeholder="Subject — e.g. Executive Assistant Role"></div>
+        <div class="input-row"><textarea placeholder="Tell me about the role or project..."></textarea></div>
+        <a href="mailto:morgadojr23@email.com" class="btn-primary" style="display:inline-block;margin-top:4px;">Send message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 <span>John Rod Morgado</span> · Executive Assistant · Philippines · Built with professionalism and purpose.</p>
+</footer>
+
+<script>
+function showSample(type, id, btn) {
+  const panels = document.querySelectorAll('#sop .sample-panel, #emails .sample-panel');
+  panels.forEach(p => p.classList.remove('active'));
+  const tabs = btn.closest('.sample-tabs').querySelectorAll('.stab');
+  tabs.forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function showEmail(id, btn) {
+  const tabs = btn.closest('.sample-tabs').querySelectorAll('.stab');
+  tabs.forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('#emails .sample-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
